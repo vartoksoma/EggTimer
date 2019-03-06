@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         seekBar.setEnabled(true);
         countDownTimer.cancel();
         controllerButton.setText("Go!");
-        mediaPlayer.stop();
+
     }
 
     public void count(View view){
@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
             }.start();
         }else {
             reset();
+            mediaPlayer.pause();
+            mediaPlayer.seekTo(0);
         }
     }
 
